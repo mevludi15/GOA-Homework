@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0a1128;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+#box-1{
+    /* width: 400px; */
+    height:480px;
+
+    background-color: #001f54;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 30px;
+    align-items: center;
+    margin:15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    gap: 20px;
+    
+}
+
+#task{
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#btn-1{
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80px;
+}
+
+.u-list{
+    list-style: none;
+    overflow-y: scroll;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.u-list li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inside-box{
+    display: flex;
+    gap: 20px;
+}
+
+.u-list li div{
+    display: flex;
+    gap: 15px ;
+}
+
+.u-list li div button{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

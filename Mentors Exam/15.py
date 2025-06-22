@@ -1,0 +1,3 @@
+def SmallerNumbers(numbers):
+    res = []
+    

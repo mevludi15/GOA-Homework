@@ -5,4 +5,4 @@ def  ArmstrongNumber(number):
 
     return sum(res) == number
 
-print(ArmstrongNumber(10))
+print(ArmstrongNumber(9474))

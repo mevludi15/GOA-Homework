@@ -1,14 +1,16 @@
-const annotations = () => {
+const div = document.getElementById("container")
+let annotations
+const annotations1 = (callback) => {
     const http = new XMLHttpRequest()
 
     http.onreadystatechange = function() {
         if(this.readyState == 4){
             
             let response = JSON.parse(this.responseText)
-            let annotations = response.annotations
+            annotations = response.annotations
 
             response.images.map(item => {
-                console.log(item)
+                // console.log(item)
 
                 annotations.map(item1 => {
                     if(item.id == item1.image_id) {
@@ -27,17 +29,37 @@ const annotations = () => {
                 })
             })
             
-            console.log(response)
+            // console.log(response)
+            callback(annotations)
         }
     }
 
-    
-
-    
-
-    http.open("GET", "./test/pigs.json")
+    http.open("GET", "./train/pigs.json")
     http.send()
+
+    return annotations
 }
 
-annotations()
+
+
+function createElements(data) {
+
+    data.map(element => {
+        let bboxavg = element.bbox.reduce( (curelement, nextelement) => {
+            return curelement + nextelement 
+        }) / element.bbox.length
+        let price = (element.area / 10000 + bboxavg).toFixed(2)
+        div.innerHTML += `
+            <div style="border: 1px solid black;">
+                <img src="./train/${element.file_name}">
+                <h2>${element.category}</h2>
+                <p>$${price}</p>
+            </div>`
+        
+    })
+   
+    console.log(data[0])
+}
+
+annotations1(createElements)
 

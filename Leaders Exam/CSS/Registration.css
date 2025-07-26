@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 36, 36);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+#name, #email, #password {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+#submit {
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px black solid;
+}

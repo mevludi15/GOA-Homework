@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 43, 43);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.reg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.books {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inp {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+#book {
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#submit {
+    width: 100px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+}
